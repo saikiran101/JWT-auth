@@ -2,13 +2,15 @@ const express = require('express')
 const router = express.Router()
 const { getDetails,setDetails,deleteDetails } = require('../controller/detailsController')
 
+const {protect}=require('../middleware/authMiddleware')
+
 //getDetails contains get function req and res
-router.get("/", getDetails);
+//protect only register user can access
+router.get("/",protect, getDetails);
 
+router.post("/",protect, setDetails);
 
-router.post("/", setDetails);
-
-
-router.delete("/:id", deleteDetails);
+//u can delete form by add user id in url and in auth bearer token
+router.delete("/:id",protect, deleteDetails);
 
 module.exports = router;

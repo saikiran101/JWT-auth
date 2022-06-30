@@ -14,19 +14,15 @@ in side the frontend folder
 
 to run frontend
 
-->After install npm
-u can run both server at a time by using
+->After install npm . u can run both server at a time by using
 
 ###npm run dev
+
 it will run both backend and frontend at a time.
 
 
 
 
-
-To run backend server
-
-->npm run server
 
 #mongoose connection is from Config/db.js 
 schema and models in Model folder

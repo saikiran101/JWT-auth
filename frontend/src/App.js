@@ -10,7 +10,7 @@ function App() {
 	return (
 		<>
 			<Router>
-				<div className="continer">
+				<div className="container">
 					<Header />
 					<Routes>
 						<Route path="/" element={<Dashboard />} />

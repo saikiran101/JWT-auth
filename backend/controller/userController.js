@@ -4,7 +4,7 @@ const asyncHandler = require('express-async-handler')
 const User =require('../model/userModel')
 
 //desc Register new user
-//route POST /user/register
+//route POST /user
 //access Private    
 const registerUser = asyncHandler(async (req, res) => {
     const { username, password } = req.body
@@ -68,11 +68,8 @@ const loginUser = asyncHandler(async (req, res) => {
 //access Private   
 //accessing data with jwt token from bearer token in postman
 const getMe = asyncHandler(async (req, res) => {
-    const { _id, username } = await User.findById(req.user.id)
-    res.status(200).json({
-        id: _id,
-        username,
-    })
+    //const { _id, username } = await User.findById(req.user.id)
+    res.status(200).json(req.user)
     res.json({message: 'User data displayed'})
 })
 

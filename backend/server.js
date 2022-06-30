@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 //user route contains-> register, login, me to display the register routes
-app.use("/user", require('./routes/UserRoutes'));
+app.use("/api/user", require('./routes/UserRoutes'));
 //form/save-details route contains-> / route with GET and POST /:id it check register user and save-details with same user if both are match DELETE 
 app.use("/form/save-details", require('./routes/detailsRouter'))
 

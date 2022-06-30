@@ -53,12 +53,12 @@ const deleteDetails = asyncHandler(async (req, res) => {
         throw new Error('User not found')
     }
     //Make sure  the logged  in user matches the goal user
-    if (detail.user.toString() !== user.id) {
+    if (detail.user.toString() !== req.user.id) {
         res.status(401)
         throw new Error('User not authorized')
     }
     await detail.remove()
-    res.status(200).json({ message: "specified form is deleted" });
+    res.status(200).json({id:req.params.id});
 }
 )
 module.exports = {

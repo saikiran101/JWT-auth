@@ -1,13 +1,17 @@
 ###npm install
+
 out side the backend folder
 
 ###npm run server
+
 to run backend
 
 ###npm install
+
 in side the frontend folder
 
 ###npm start
+
 to run frontend
 
 ->After install npm

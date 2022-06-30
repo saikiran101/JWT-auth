@@ -11,24 +11,18 @@ const Dashboard = () => {
 	const dispatch = useDispatch();
 	const { user } = useSelector((state) => state.auth);
 
-	const { details, isLoading, isError, message } = useSelector(
+	const { details, isLoading} = useSelector(
 		(state) => state.detail
 	);
-	console.log(details)
+	console.log(details);
 	useEffect(() => {
-
 		if (!user) {
 			navigate("/login");
 		}
-		dispatch(getDetails());
-
-		return () => {
-			dispatch(reset());
-		};
-	}, [user, navigate, dispatch, isError, message]);
+	}, [user, navigate]);
 
 	if (isLoading) {
-		return <Spinner/>
+		return <Spinner />;
 	}
 
 	return (
@@ -38,7 +32,7 @@ const Dashboard = () => {
 				<p>Form details</p>
 			</section>
 			<Formdetails />
-			
+
 			<section className="content">
 				{details.length > 0 ? (
 					<div className="goals">

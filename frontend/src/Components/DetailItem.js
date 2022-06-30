@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from "react-redux";
 import { deleteDetail } from '../features/details/detailSlice';
 
-function DetailItem ({ detail }) {
+const DetailItem =({ detail })=> {
  const dispatch = useDispatch()
 
  return (

@@ -313,17 +313,6 @@ const Formdetails = () => {
 					</Container>
 				</Col>
 			</Row>
-			{/*<section className="content">
-				{details.length > 0 ? (
-					<div className="goals">
-						{details.map((goal) => (
-							<GoalItem key={goal._id} goal={goal} />
-						))}
-					</div>
-				) : (
-					<h3>You have not set any details</h3>
-				)}
-			</section>*/}
 		</div>
 	);
 };
